@@ -1,0 +1,333 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: poppins;
+}
+button{
+    cursor: pointer;
+}
+:root{
+    --font-color:hsl(14, 86%, 42%);
+    --desert-background-color:hsl(20, 50%, 98%);
+    --pricing-background-color:white;   
+    --pricing-font-color:hsl(12, 20%, 44%);
+    --color:hsl(159, 69%, 38%);
+}
+
+    
+.pop-up-box
+{
+ position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* higher than all content */
+   
+}
+
+main{
+    padding: 30px;
+    display: flex;
+    /* position: fixed; */
+    justify-content: center;
+    gap: 0px 20px;
+    min-width: 100%;
+    overflow: hidden;
+    background-color: var(--desert-background-color);
+}
+header{
+    padding: 12px 0px  ;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+.desert-menu-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-top: 20px;
+
+}
+.desert-container{
+ min-width: 250px;
+ min-height: 250px;
+ border-radius: 12px;
+ position: relative;
+}
+
+.desert-image-container{
+    width: 100%;
+    
+}
+.desert-image-container img{
+    width: 240px;
+    height: 200px;
+    border-radius: 15px;
+ }
+.cart-adder-bottom-container{
+    width: 100%;
+    text-align: center;
+}
+
+.cart-adder-bottom-container .cart-btm{
+    position: absolute;
+    left: 40px;
+    top: 180px;
+    border-radius: 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border: 2px solid black; 
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: var(--desert-background-color); 
+    
+}
+
+.clicked
+{
+    position: absolute;
+    left: 40px;
+    top: 180px;
+    background: var(--font-color);
+    padding: 5px 8px;
+    display: none;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 50px;
+    align-items: center;
+    border: none;
+
+}
+.clicked button{
+    
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+ 
+}
+.clicked:hover .desert-image-container{
+    border: 10px solid var(--font-color);
+    
+    border-radius: 25px;
+}
+.increment{
+padding: 5px 4px;
+}
+.decrement{
+padding: 9px 3px;
+
+}
+.desertCardValue{
+    padding: 0px 25px;
+    color: white;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.desert-detail-container{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+}
+#desert-name{
+    font-size: 16px;
+}
+#desert-price{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+/* shopping cart  pricing style code  */
+
+/* empty pricing code */
+.pricing-container{
+    border-radius: 20px;
+     background-color: var(--pricing-background-color);
+    padding: 15px;
+    min-width:400px;
+    min-height:200px;
+   text-align: center;
+
+}
+.pricing-container h4{
+    float: left;
+    color: var(--font-color);
+    margin-bottom: 10px;
+
+}
+.pricing-empty-design-container
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pricing-empty-design-container article 
+{
+    padding: 10px;
+}
+.pricing-empty-design-container article img{
+    width: 160px;
+    height: 160px;
+}
+.pricing-container p {
+    color: var(--pricing-font-color);
+    font-size: 0.8rem;
+}
+/* when ordrer is listed  */
+.order{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.348);
+    padding-top: 20px;
+
+}
+.order-title
+{
+    display: flex;
+    padding-bottom: 5px;
+    justify-content: space-between;
+}
+.order-title h5{
+    font-weight: 400;
+
+}
+
+.order-title button{
+   background: none;
+    border-radius: 50%;
+   padding: 0px 5px ;
+
+}
+
+.order-price-quantity{
+    display: flex;
+    gap: 20px;
+    padding-bottom: 5px;
+    align-items: center;
+}
+.order-price-quantity #quantity{
+    font-weight: 500;
+    color: var(--font-color);
+}
+.price{
+    font-weight: 200;
+    font-size: 0.7rem;
+}
+#single-price{
+    padding: 0px 5px;
+}
+
+/* order confirm function */
+
+.order-total-price-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0px;
+    align-items: center;
+}
+
+#total{
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.order-total-text{
+     font-weight: 300;
+    font-size: 0.9rem;
+}
+.carbon-neutral-container{
+    /* margin: 5px; */
+    padding: 15px;
+    background-color: hsl(13, 31%, 94%);
+    border-radius: 10px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.confirm-order-btm{
+    margin-top: 20px;
+    padding: 10px 0px;
+    width: 100%;
+    border-radius: 25px;
+    background-color: var(--font-color);
+    border: none;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    
+}
+/* conformation order style code  */
+
+.desert-order-conformation-container {
+    
+    padding: 30px;
+    background-color: var(--pricing-background-color);
+    min-width: 500px;
+    border-radius: 10px;
+      animation: popupFadeIn 0.3s ease;
+
+    /* height: 500px; */
+
+}
+.suggestion{
+    font-size: 0.6rem;
+    font-weight: 200;
+}
+.desert-ordered-list {
+    background: var(--desert-background-color);
+        padding: 15px;
+        border-radius: 20px;
+
+}
+.order-img-container img{
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+}
+.conformation-order-container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.327);
+}
+.conformation-deserts-total-price{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+.conformation-desert-total-price{
+    float: right;
+    padding-left: 100px;
+}
+.conformation-order{
+    display: flex;
+    gap: 20px;
+
+}
+
+@media (max-width:600px) {
+
+    
+}

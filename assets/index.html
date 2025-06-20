@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="pop-up-box">
+    <div class="desert-order-conformation-container">
+<header>
+ <article> 
+  <img src="assets/images/icon-order-confirmed.svg" alt="conformation">
+ </article>
+ <h2>Order Confirmed</h2>
+ <p class="suggestion">We hope you enjoy your food!</p>
+</header>
+
+<div class="desert-ordered-list">
+ 
+
+</div>
+ <div class="conformation-deserts-total-price">
+  <p>Order Total</p>
+  <span id="conformation-total">$0.00</span>
+
+ </div>
+
+ <button class="confirm-order-btm">Start New Order</button>
+
+</div>
+</div>
+
+
+  <main>
+
+<section class="desert-shopping-menu-container">
+
+  <header>
+    <h2>Desserts</h2>
+  </header>
+
+  <div class="desert-menu-list">
+    <div class="desert-container">
+      <article class="desert-image-container  ">
+        <img   src="${desert.image["desktop"]}" alt="Desert Image">
+      </article>
+     <div class="cart-adder-bottom-container">
+            <div class="cart-btm ">
+            Add to Cart
+            </div>
+              <div class="clicked">
+                                
+                <button id="decrement"><img src="assets/images/icon-decrement-quantity.svg" alt="decrement"></button>
+
+              <span id="desertCardValue">0  </span>
+                            <button id="increment"><img src="assets/images/icon-increment-quantity.svg" alt="desert image"></button>
+    
+              </div>
+  
+
+</div>
+      <div class="desert-detail-container">
+        <span id="desert-name"> ${desert.category}</span>
+        <h5 id="desert-title">${desert.name}</h5>
+        <span id="desert-price"> $${desert.price}</span>
+      </div>
+    </div>
+
+
+</section>
+<section class="shopping-cart-pricing-container">
+  
+
+<div class="pricing-container">
+    <h4>Your Cart(<span id="desert-count">0</span>)</h4>
+
+
+  <div class="pricing-empty-design-container" style="display: flex;">
+
+    <article> <img src="assets/images/illustration-empty-cart.svg" alt="empty design"></article>
+    
+    <p>Your added items will appear here</p>
+  </div>
+  
+  
+  <div class="order-listed-container" style="display: none;">
+
+    <div class="order-list">
+    
+
+    
+
+  
+  </div>
+
+ <div class="order-total-price-container">
+ <p class="order-total-text"> Order Total</p>
+
+  <span id="total">$0</span>
+
+ </div>
+ <div class="carbon-neutral-container">
+   <img src="assets/images/icon-carbon-neutral.svg" alt="carbon-neutral"> This is a <b>carbon-neutral</b> delivery
+
+
+ </div>
+
+ <button class="confirm-order-btm" onClick="submittingOrder()">Confirm Order </button>
+
+  </div>
+  
+
+  
+</div>
+
+
+
+</section>
+
+
+  </main>
+
+
+<script src="script.js"></script>
+
+
+
+  <!-- Desserts
+
+  Waffle with Berries
+  Waffle
+  6.50
+  Add to Cart
+
+  Vanilla Bean Crème Brûlée
+  Crème Brûlée
+  7.00
+  Add to Cart
+
+  Macaron Mix of Five
+  Macaron
+  8.00
+  Add to Cart
+
+  Classic Tiramisu
+  Tiramisu
+  5.50
+  Add to Cart
+
+  Pistachio Baklava
+  Baklava
+  4.00
+  Add to Cart
+
+  Lemon Meringue Pie
+  Pie
+  5.00
+  Add to Cart
+
+  Red Velvet Cake
+  Cake
+  4.50
+  Add to Cart
+
+  Salted Caramel Brownie
+  Brownie
+  4.50
+  Add to Cart
+
+  Vanilla Panna Cotta
+  Panna Cotta
+  6.50
+  Add to Cart
+
+  Your Cart (<!-- Quantity -->
+  <!-- Your added items will appear here --> 
+
+  </div>
+</body>
+</html>
